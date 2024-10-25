@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --light-blue: #00bfff; /* Altere para o valor desejado */
+    --dark-blue: #003366; /* Altere para o valor desejado */
+  }
+  
