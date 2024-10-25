@@ -1,14 +1,11 @@
-// app/login.tsx
-import React from "react";
-import SignUpButton from "@/components/SignUpButton/page";
-import LoginPage from "@/components/LoginPage/page";
-import '../styles/globals.css';
+"use client";
+import React from "react"; 
+import LoginPage from "@/components/LoginPage/page"; // Importando LoginPage
 
-const Login: React.FC = () => {
+const Login: React.FC<{ onSignUpClick: () => void }> = ({ onSignUpClick }) => {
   return (
     <div>
-      <LoginPage /> 
-      <SignUpButton text="Cadastrar" redirectTo="/signup" /> 
+      <LoginPage onSignUpClick={onSignUpClick} /> {/* Passa a função para o LoginPage */}
     </div>
   );
 };

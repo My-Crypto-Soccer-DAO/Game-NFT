@@ -1,10 +1,15 @@
+// app/components/LoginPage/page.tsx
 "use client"; 
 
 import React from "react";
 import Image from "next/image"; 
 import SignUpButton from "@/components/SignUpButton/page";
 
-const LoginPage: React.FC = () => {
+interface LoginPageProps {
+  onSignUpClick: () => void; // Define a prop para receber a função
+}
+
+const LoginPage: React.FC<LoginPageProps> = ({ onSignUpClick }) => {
   return (
     <div className="relative flex flex-col items-center justify-center w-screen h-screen">
       {/* Video de fundo */}
@@ -31,7 +36,8 @@ const LoginPage: React.FC = () => {
         <h1 className="text-2xl font-bold text-white mb-5 text-center">
           Join our mailing list to receive the latest news and promo from my crypto soccer DAO
         </h1>
-        <SignUpButton text="SIGN UP NOW" redirectTo="/game" /> {/* Botão de entrar */}
+        {/* Passa a função onSignUpClick para o botão de inscrição */}
+        <SignUpButton text="SIGN UP NOW" redirectTo="/game" onSignUpClick={onSignUpClick} />
       </div>
 
       {/* Imagens na parte inferior */}
