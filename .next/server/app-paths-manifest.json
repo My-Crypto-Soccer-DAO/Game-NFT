@@ -1,3 +1,6 @@
 {
-  "/game/page": "app/game/page.js"
+  "/page": "app/page.js",
+  "/game/page": "app/game/page.js",
+  "/game/register/page": "app/game/register/page.js",
+  "/game/metamask/page": "app/game/metamask/page.js"
 }

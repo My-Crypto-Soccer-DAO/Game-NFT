@@ -9,12 +9,23 @@
     "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
     "/game/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/game/page.js"
+    ],
+    "/game/register/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/game/register/page.js"
+    ],
+    "/game/metamask/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/game/metamask/page.js"
     ]
   }
 }
