@@ -35,7 +35,7 @@
     "components",
     "next-env.d.ts",
     ".next/types/**/*.ts"
-  ],
+, "lib/authService.ts", "services"  ],
   "exclude": [
     "node_modules"
   ]
