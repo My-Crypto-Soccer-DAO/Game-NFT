@@ -4,7 +4,6 @@ import Login from "./login"; // Importando a página de login
 import NavigationPage from "@/components/Navigation/page";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { registerUser } from "@/lib/services/authService"; // Verifique se o caminho está correto
 
 
 const HomePage: React.FC = () => {
