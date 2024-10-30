@@ -20,9 +20,9 @@
     "noEmit": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",  // Adicionando baseUrl
+    "baseUrl": ".",  
     "paths": {
-      "@/*": ["*"]  // Adicionando paths
+      "@/*": ["*"]  
     },
     "plugins": [
       {
@@ -33,9 +33,11 @@
   "include": [
     "app",
     "components",
+    "lib/authService.ts",
+    "services", 
     "next-env.d.ts",
     ".next/types/**/*.ts"
-, "lib/authService.ts", "services"  ],
+  ],
   "exclude": [
     "node_modules"
   ]

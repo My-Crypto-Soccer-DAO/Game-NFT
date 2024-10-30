@@ -5,6 +5,7 @@ import { auth, db } from '../../../services/firebaseConfig';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { registerUser } from "../../../lib/authService";
+import { useRouter } from 'next/navigation';
 
 interface InputFieldProps {
   label: string;
@@ -40,6 +41,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, id, value, onChange }) =
 };
 
 const RegistrationPage: React.FC = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,6 +86,7 @@ const RegistrationPage: React.FC = () => {
 
       console.log("Usuário registrado com sucesso:", user);
       alert("Usuário registrado com sucesso!");
+      router.push('/game/dashboard');
     } catch (error) {
       console.error("Erro ao registrar:", (error as Error).message);
       alert("Erro ao registrar usuário.");
@@ -120,6 +123,7 @@ const RegistrationPage: React.FC = () => {
       const user = result.user;
       console.log("Usuário logado com sucesso:", user);
       alert("Usuário logado com sucesso!");
+      router.push('/game/dashboard');
     } catch (error) {
       console.error("Erro ao fazer login com o Google:", (error as Error).message);
       alert("Erro ao fazer login com o Google.");
@@ -135,7 +139,7 @@ const RegistrationPage: React.FC = () => {
     { label: "País", id: "country" },
   ];
 
-  // Lista completa de países
+  
   const countries = [
     "Afeganistão", "África do Sul", "Albânia", "Alemanha", "Andorra", "Angola", "Antígua e Barbuda",
     "Argélia", "Argentina", "Armenia", "Austrália", "Áustria", "Azerbaijão", "Bahamas", "Bahrein",
