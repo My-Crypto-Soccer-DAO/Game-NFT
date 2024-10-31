@@ -11,8 +11,21 @@
 # production
 /build
 
-# misc
+# Next.js build output
+.next/
+out/
+
+# Webpack hot update files
+*.hot-update.js
+*.hot-update.json
+
+# Static files and chunks
+/static/
+/chunks/
+
+# Miscellaneous
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
