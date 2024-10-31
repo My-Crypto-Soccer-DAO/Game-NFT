@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Image from 'next/image';
 import ProfileInfo from '../../../components/ProfileInfo/page'; 
 import CardSection from '../../../components/CardSection/page'; 
 import Dashboard from '../../../components/Dashboard/page'; 
@@ -11,6 +12,17 @@ const OnCardPage: React.FC = () => {
 
   return (
     <main className="relative flex flex-col items-center w-full min-h-screen text-white">
+      {/* Adicionando a imagem no topo da página */}
+      <div className="flex justify-center w-full mt-10">
+        <Image
+          src="/Logo.png"
+          alt="Logo"
+          width={168}
+          height={168}
+          className="object-contain"
+        />
+      </div>
+
       {/* Vídeo de fundo que cobre toda a tela */}
       <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay muted loop>
         <source src="/estadionoite.mp4" type="video/mp4" />

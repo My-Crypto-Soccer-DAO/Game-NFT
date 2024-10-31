@@ -51,7 +51,7 @@ const Dashboard: React.FC = () => {
                 h-16 min-w-[250px] text-white transition-colors duration-300 border border-white rounded-lg 
              bg-transparent hover:outline hover:outline-2 hover:outline-light-blue hover:outline-offset-2 
              hover:bg-light-blue hover:text-dark-blue focus:outline-none 
-             focus:ring focus:ring-blue-300 shadow-lg hover:shadow-[0px_0px_40px_20px_rgba(0,255,255,0.5)] // Tamanho fixo para todos os botões
+             focus:ring focus:ring-blue-300 shadow-lg hover:shadow-[0px_0px_40px_20px_rgba(0,255,255,0.5)] // 
               "
             >
               <Image 

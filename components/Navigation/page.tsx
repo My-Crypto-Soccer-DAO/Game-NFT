@@ -1,56 +1,48 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'; // Importa o useRouter
+import { useRouter } from 'next/navigation';
+import brasaoAnimation from '@/public/brasao.json';
+import Lottie from "lottie-react";
 
-// Definição do tipo para os botões de autenticação
 interface AuthButtonData {
   title: string;
-  subtitle?: string;
   iconSrc: string;
-  onClick: () => void; // Função de clique para cada botão
+  onClick: () => void;
 }
 
-// Array de dados dos botões
 const authButtons: AuthButtonData[] = [
   {
-    title: 'CONNECT YOUR',
-    subtitle: 'WALLET',
+    title: 'CONNECT YOUR WALLET',
     iconSrc: '/icon1p2.png',
-    onClick: () => {}, // Placeholder, será substituído
+    onClick: () => {},
   },
   {
-    title: 'LOGIN TO YOUR',
-    subtitle: 'ACCOUNT',
+    title: 'LOGIN YOUR ACCOUNT',
     iconSrc: '/icon2p2.png',
-    onClick: () => {}, // Placeholder
+    onClick: () => {},
   },
   {
     title: 'REGISTER NOW',
     iconSrc: '/icon3p2.png',
-    onClick: () => {}, // Placeholder
+    onClick: () => {},
   },
 ];
 
-// Componente principal
 const NavigationPage: React.FC = () => {
-  const router = useRouter(); // Hook de navegação
+  const router = useRouter();
 
-  // Funções para navegação
   const handleConnectWallet = () => {
-    // Navega para a página de conexão da wallet
-    router.push('/game/metamask'); // Ajuste a rota conforme necessário
+    router.push('/game/metamask');
   };
 
   const handleRegister = () => {
-    // Navega para a página de registro
-    router.push('/game/register'); // Ajuste a rota conforme necessário
+    router.push('/game/register');
   };
 
-  // Atualizando o array de botões com as funções de clique
   const updatedAuthButtons = authButtons.map(button => {
     switch (button.title) {
-      case 'CONNECT YOUR':
+      case 'CONNECT YOUR WALLET':
         return { ...button, onClick: handleConnectWallet };
       case 'REGISTER NOW':
         return { ...button, onClick: handleRegister };
@@ -60,56 +52,56 @@ const NavigationPage: React.FC = () => {
   });
 
   return (
-    <main className="relative flex flex-col w-full min-h-screen">
-      {/* Vídeo de fundo */}
+    <main className="relative flex flex-col items-center justify-center w-full min-h-screen">
       <video
         autoPlay
         loop
         muted
-        className="absolute inset-0 object-cover w-full h-full z-0" // Ajuste de z-index
+        className="absolute inset-0 object-cover w-full h-full z-0"
       >
-        <source src="/estadiodia.mp4" type="video/mp4" />
+        <source src="/estadionoite.mp4" type="video/mp4" />
         Seu navegador não suporta vídeos.
       </video>
 
-      {/* Seção de botões de autenticação */}
-      <section className="flex relative flex-col self-center mt-8 mb-0 ml-8 max-w-full w-[325px] max-md:mb-2.5">
+      <div className="absolute top-5 left-1/2 transform -translate-x-1/2 z-20 w-1/4 md:w-1/6">
+        <Lottie animationData={brasaoAnimation} loop={true} autoplay={true} style={{ width: '100%', height: 'auto' }} />
+      </div>
+
+      <section className="relative z-10 flex flex-col items-center gap-4 p-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mt-20">
+        {/* Caixa azul marinho transparente atrás dos botões */}
+        <div className="absolute inset-0 bg-[#001f3f] opacity-60 rounded-[25px] z-[-1]" /> {/* Adicionei esta linha */}
+
         {updatedAuthButtons.map((button, index) => (
-          <div key={index} className={index > 0 ? 'mt-6' : ''}>
-            <AuthButton {...button} />
-          </div>
+          <AuthButton key={index} {...button} />
         ))}
       </section>
     </main>
   );
 };
 
-// Componente do botão de autenticação
 interface AuthButtonProps {
   title: string;
-  subtitle?: string;
   iconSrc: string;
-  onClick: () => void; // Adiciona onClick
+  onClick: () => void;
 }
 
-const AuthButton: React.FC<AuthButtonProps> = ({ title, subtitle, iconSrc, onClick }) => {
+const AuthButton: React.FC<AuthButtonProps> = ({ title, iconSrc, onClick }) => {
   return (
-    <div className="flex flex-col justify-center py-0.5 w-full bg-cyan-900 rounded-[43px]">
+    <div className="flex flex-col justify-center w-full bg-cyan-900 rounded-[25px]">
       <button
-        onClick={onClick} // Adiciona a lógica de clique aqui
-        className="flex z-10 gap-5 justify-between py-3.5 pr-4 pl-14 -mt-1 border-white border-solid bg-slate-900 border-[3px] rounded-[43px] max-md:pl-5"
+        onClick={onClick}
+        className="flex z-10 gap-2 items-center justify-between py-2 pr-2 pl-4 border-white border-solid bg-slate-900 border-[2px] rounded-3xl max-md:pl-2 w-full hover:shadow-[0px_0px_20px_10px_rgba(0,255,255,0.5)] "
       >
-        <div className="flex flex-col my-auto text-xl font-bold text-white">
+        <div className="flex flex-grow my-auto text-lg sm:text-base md:text-lg font-bold text-white text-left">
           <span>{title}</span>
-          {subtitle && <span className="self-center">{subtitle}</span>}
         </div>
-        <div className="flex flex-col justify-center items-center px-1.5 w-16 h-16 bg-white rounded-full">
+        <div className="flex flex-col justify-center items-center px-1 w-10 h-10 bg-white rounded-full">
           <Image
             loading="lazy"
             src={iconSrc}
             alt=""
-            width={52}
-            height={52}
+            width={48}
+            height={48}
             className="object-contain aspect-square"
           />
         </div>

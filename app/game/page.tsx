@@ -1,26 +1,12 @@
 // app/game/page.tsx
 "use client";
-import React, { useState } from "react"; 
-import Login from "../login"; 
-import NavigationPage from "@/components/Navigation/page"; 
-
+import React from "react";
+import NavigationPage from "@/components/Navigation/page";
 
 const GamePage: React.FC = () => {
-  const [currentPage, setCurrentPage] = useState<"login" | "navigation">("login"); // Estado para controlar a página atual
-
-  const handleSignUpClick = () => {
-    setCurrentPage("navigation"); // Muda a página atual para Navigation
-  };
-
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold mb-8">Bem-vindo ao Jogo</h1>
-
-      {/* Renderiza o Login se a página atual for login */}
-      {currentPage === "login" && <Login onSignUpClick={handleSignUpClick} />}
-      
-      {/* Renderiza a NavigationPage se a página atual for navigation */}
-      {currentPage === "navigation" && <NavigationPage />}
+      <NavigationPage /> 
     </div>
   );
 };
