@@ -1,6 +1,6 @@
 {
   "/page": "app/page.js",
   "/game/page": "app/game/page.js",
-  "/game/metamask/page": "app/game/metamask/page.js",
+  "/game/register/page": "app/game/register/page.js",
   "/game/oncards/page": "app/game/oncards/page.js"
 }
