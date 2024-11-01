@@ -23,7 +23,7 @@ const MetamaskPage: FC<MetamaskPageProps> = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="fixed top-4 right-28 z-50 p-2 z-[1000] bg-white rounded-md shadow-lg">
+      <div className="fixed top-4 right-28 z-50 p-2 rounded-md shadow-lg border-1 border-[#00bfff] shadow-lg glow-effect">
         <ConnectButton
           client={client}
           theme="light"
@@ -33,7 +33,7 @@ const MetamaskPage: FC<MetamaskPageProps> = () => {
       </div>
 
       <section className="flex relative flex-col justify-center items-center px-16 py-24 w-full min-h-screen max-md:px-5">
-        <div className="flex flex-col items-center justify-center p-8 bg-slate-900 bg-opacity-70 rounded-lg shadow-lg max-w-md w-full z-10">
+        <div className="flex flex-col items-center justify-center p-8 bg-slate-900 bg-opacity-70 rounded-lg shadow-lg max-w-md w-full z-10 border-[#00bfff] shadow-lg glow-effect">
           <div className="flex relative gap-4 mb-4 items-center">
             <Image
               src={logoSrc}

@@ -2,6 +2,8 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { ConnectButton } from 'thirdweb/react'; 
+import { client } from '../../../lib/client';
 
 const logoSrc = "/Logo.png"; 
 
@@ -15,21 +17,40 @@ const navigationItems = [
 const Dashboard: React.FC = () => {
   const router = useRouter();
 
+  const handleConnect = () => {
+    console.log('Conectado com sucesso!');
+  };
+
   return (
     <main className="relative flex flex-col items-center w-full min-h-screen text-white">
-      <video className="absolute w-full h-full object-cover -z-10" autoPlay muted loop>
+      <video className="absolute top-0 left-0 w-full h-full object-cover -z-10" autoPlay muted loop>
         <source src="/estadionoite.mp4" type="video/mp4" />
       </video>
 
-      <div className="flex justify-center mt-10">
-        <Image src={logoSrc} alt="Logo" width={200} height={100} />
+      <div className="flex justify-center mt-6 sm:mt-10">
+        <Image 
+          src={logoSrc} 
+          alt="Logo" 
+          width={200} 
+          height={100} 
+          className="w-32 sm:w-48 md:w-60 lg:w-72" 
+        />
       </div>
 
-      <section className="flex flex-col sm:flex-row justify-center items-center px-5 py-20 w-full min-h-[872px]">
-        <nav className="flex flex-col sm:flex-row items-center px-5 pt-20 bg-slate-900 bg-opacity-60 rounded-[49px] w-full sm:w-[600px]">
-          
-          {/* Imagem à esquerda */}
+      <section className="flex flex-col sm:flex-row justify-center items-center px-4 py-10 sm:py-20 w-full min-h-[872px]">
+        <nav className="flex flex-col sm:flex-row items-center px-4 py-8 bg-slate-900 bg-opacity-60 rounded-[49px] w-full sm:w-[600px] p-6">
+           
           <div className="w-full sm:w-1/2">
+        
+            <div className="mb-6 -mt-4"> 
+              <ConnectButton
+                client={client}
+                theme="light"
+                connectModal={{ size: 'compact' }}
+                onConnect={handleConnect}
+              />
+            </div>
+
             <Image
               src="/kicking3.png"
               alt="Kicking Image"
@@ -41,8 +62,7 @@ const Dashboard: React.FC = () => {
             />
           </div>
 
-          
-          <div className="flex flex-col items-center w-full sm:w-1/2 ">
+          <div className="flex flex-col items-center w-full sm:w-1/2">
             {navigationItems.map((item, index) => (
               <button 
                 key={index} 

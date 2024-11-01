@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import ProfileInfo from '../../../components/ProfileInfo/page'; 
 import CardSection from '../../../components/CardSection/page'; 
+import ButtonCardSection from '../../../components/ButtonCardSection/page';
 import Dashboard from '../../../components/Dashboard/page'; 
 
 const OnCardPage: React.FC = () => {
@@ -41,7 +42,8 @@ const OnCardPage: React.FC = () => {
           
           <div className="flex w-full md:w-2/3">
             <div className="flex flex-col w-full">
-              <CardSection />
+              <CardSection/>
+              <ButtonCardSection />
             </div>
           </div>
           <Dashboard />

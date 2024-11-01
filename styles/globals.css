@@ -8,4 +8,27 @@
     --light-blue: #00bfff; /* Altere para o valor desejado */
     --dark-blue: #003366; /* Altere para o valor desejado */
   }
+  scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thumb-blue-neon {
+    scrollbar-color: #00FFFF transparent; /* Tom azul neon */
+  }
+  
+  .scrollbar-thumb-blue-neon::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollbar-thumb-blue-neon::-webkit-scrollbar-thumb {
+    background-color: #00FFFF; /* Tom azul neon */
+    border-radius: 10px;
+  }
+  
+  .scrollbar-thumb-blue-neon::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .glow-effect {
+    box-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 15px #00bfff, 0 0 5px #00bfff;
+  }
   
