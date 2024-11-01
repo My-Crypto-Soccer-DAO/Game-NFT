@@ -237,7 +237,7 @@ eval("__webpack_require__.a(module, async (__webpack_handle_async_dependencies__
 var __webpack_require__ = require("../../../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/thirdweb","vendor-chunks/next","vendor-chunks/@swc","vendor-chunks/viem","vendor-chunks/@tanstack"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fgame%2Foncards%2Fpage&page=%2Fgame%2Foncards%2Fpage&appPaths=%2Fgame%2Foncards%2Fpage&pagePath=private-next-app-dir%2Fgame%2Foncards%2Fpage.tsx&appDir=%2Fhome%2Fianov%2Fgame3%2Ftrump-cards%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fianov%2Fgame3%2Ftrump-cards&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
+var __webpack_exports__ = __webpack_require__.X(0, ["vendor-chunks/thirdweb","vendor-chunks/viem","vendor-chunks/next","vendor-chunks/@tanstack","vendor-chunks/@swc"], () => (__webpack_exec__("(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2Fgame%2Foncards%2Fpage&page=%2Fgame%2Foncards%2Fpage&appPaths=%2Fgame%2Foncards%2Fpage&pagePath=private-next-app-dir%2Fgame%2Foncards%2Fpage.tsx&appDir=%2Fhome%2Fianov%2Fgame3%2Ftrump-cards%2Fapp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=%2Fhome%2Fianov%2Fgame3%2Ftrump-cards&isDev=true&tsconfigPath=tsconfig.json&basePath=&assetPrefix=&nextConfigOutput=&preferredRegion=&middlewareConfig=e30%3D!")));
 module.exports = __webpack_exports__;
 
 })();
