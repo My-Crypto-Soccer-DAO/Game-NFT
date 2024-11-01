@@ -13,7 +13,7 @@ const MetamaskPage: FC<MetamaskPageProps> = () => {
 
   // Função chamada após conexão
   const handleConnect = () => {
-    router.push('/game/oncards');
+    router.push('/game/dashboard');
   };
 
   return (
