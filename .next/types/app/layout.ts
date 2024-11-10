@@ -1,4 +1,4 @@
-// File: /home/ianov/game3/trump-cards/app/layout.tsx
+// File: /home/ianov/game/Game-NFT/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
