@@ -17,20 +17,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/game/page.js"
     ],
-    "/game/register/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/game/register/page.js"
-    ],
     "/game/metamask/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/game/metamask/page.js"
     ],
-    "/game/oncards/page": [
+    "/game/dashboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/game/oncards/page.js"
+      "static/chunks/app/game/dashboard/page.js"
+    ],
+    "/game/marketplace/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/game/marketplace/page.js"
     ]
   }
 }
