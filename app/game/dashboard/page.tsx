@@ -2,16 +2,15 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { ConnectButton } from 'thirdweb/react'; 
-import { client } from '../../../lib/client';
-import { ThirdwebProvider } from 'thirdweb/react';
+import { ConnectWallet } from '@thirdweb-dev/react'; 
+
 
 const logoSrc = "/Logo.png"; 
 
 const navigationItems = [
   { icon: '/web2setup.png', title: 'ON GAME CARDS', path: '/game/oncards' },
   { icon: '/onchainsetup.png', title: 'ON CHAIN CARDS', path: '/game/onchaincards' },
-  { icon: '/cardssetup.png', title: 'BUY CARDS', path: '/game/marketplace' },
+  { icon: '/cardssetup.png', title: 'BUY CARDS', path: '/marketplace' },
   { icon: '/imgsetup.png', title: 'EXIT', path: '/' }
 ];
 
@@ -40,13 +39,11 @@ const Dashboard: React.FC = () => {
 
       <section className="flex flex-col sm:flex-row justify-center items-center px-4 py-10 sm:py-20 w-full min-h-[872px]">
         <nav className="flex flex-col sm:flex-row items-center px-4 py-8 bg-slate-900 bg-opacity-60 rounded-[49px] w-full sm:w-[600px] p-6">
+           
           <div className="w-full sm:w-1/2">
+        
             <div className="mb-6 -mt-4"> 
-              <ConnectButton
-                client={client}
-                theme="light"
-                connectModal={{ size: 'compact' }}
-                onConnect={handleConnect}
+              <ConnectWallet
               />
             </div>
 

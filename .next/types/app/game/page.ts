@@ -1,4 +1,4 @@
-// File: /home/ianov/game/Game-NFT/app/game/page.tsx
+// File: /home/ianov/teste-game-25/Game-NFT/app/game/page.tsx
 import * as entry from '../../../../app/game/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

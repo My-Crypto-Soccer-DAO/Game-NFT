@@ -21,16 +21,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/game/metamask/page.js"
-    ],
-    "/game/dashboard/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/game/dashboard/page.js"
-    ],
-    "/game/marketplace/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/game/marketplace/page.js"
     ]
   }
 }
