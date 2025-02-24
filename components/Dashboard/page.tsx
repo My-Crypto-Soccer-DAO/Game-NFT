@@ -20,7 +20,7 @@ const navigationItems = [
     icon: '/cardssetup.png',
     title: 'BUY CARDS',
     iconAlt: 'Buy cards icon',
-    path: '/game/buycards'
+    path: '/marketplace'
   },
   {
     icon: '/imgsetup.png',

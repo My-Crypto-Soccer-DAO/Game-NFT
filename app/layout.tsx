@@ -1,16 +1,15 @@
-// app/layout.tsx
+// app/layout.tsx (ou onde quer que você tenha o componente raiz)
 "use client";
 import React, { useState } from "react";
-import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "thirdweb/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import '../styles/globals.css'; // Seu CSS global
-import { PolygonAmoyTestnet } from "@thirdweb-dev/chains";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient());
 
   return (
-    <ThirdwebProvider activeChain={PolygonAmoyTestnet}>
+    <ThirdwebProvider>
       <QueryClientProvider client={queryClient}>
         <html lang="en">
           <body>

@@ -4,9 +4,16 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import SignUpButton from "@/components/SignUpButton/page";
-import Lottie from "lottie-react";
-import Slider from "react-slick"; // Importando o Slider
+import dynamic from 'next/dynamic'; // Importação do dynamic do Next.js
 import brasaoAnimation from '@/public/brasao.json'; // Importando o JSON da animação
+import Slider from "react-slick"; // Importação do Slider
+import "slick-carousel/slick/slick.css"; // Estilos do Slick
+import "slick-carousel/slick/slick-theme.css"; // Temas do Slick
+
+// Carregamento dinâmico do 
+const Lottie = dynamic(() => import('lottie-react'), {
+    ssr: false // Desabilita a renderização no servidor
+});
 
 interface LoginPageProps {
   onSignUpClick: () => void; // Define a prop para receber a função

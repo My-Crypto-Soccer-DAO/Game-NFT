@@ -32,9 +32,10 @@
   },
   "include": [
     "app",
+    "pages",
     "components",
-    "lib/authService.ts",
-    "services", 
+    "lib",
+    "services",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],

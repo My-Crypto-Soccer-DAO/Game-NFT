@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import brasaoAnimation from '@/public/brasao.json';
@@ -30,16 +30,7 @@ const authButtons: AuthButtonData[] = [
 ];
 
 const NavigationPage: React.FC = () => {
-  const [isClient, setIsClient] = useState(false);
   const router = useRouter();
-
-  useEffect(() => {
-    setIsClient(true); // Set to true once mounted on the client
-  }, []);
-
-  if (!isClient) {
-    return null; // Prevent rendering on the server
-  }
 
   const handleConnectWallet = () => {
     router.push('/game/metamask');
@@ -77,7 +68,9 @@ const NavigationPage: React.FC = () => {
       </div>
 
       <section className="relative z-10 flex flex-col items-center gap-4 p-4 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mt-20">
-        <div className="absolute inset-0 bg-[#001f3f] opacity-60 rounded-[25px] z-[-1]" />
+        {/* Caixa azul marinho transparente atrás dos botões */}
+        <div className="absolute inset-0 bg-[#001f3f] opacity-60 rounded-[25px] z-[-1]" /> {/* Adicionei esta linha */}
+
         {updatedAuthButtons.map((button, index) => (
           <AuthButton key={index} {...button} />
         ))}

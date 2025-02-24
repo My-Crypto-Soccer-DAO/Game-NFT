@@ -1,13 +1,11 @@
 "use client";
-import React, { FC, useEffect } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
-import { ConnectButton } from 'thirdweb/react'; 
-import { client } from '../../../lib/client';
-import { useRouter } from 'next/navigation';
+import { ConnectButton } from "thirdweb/react";
+import { useRouter } from "next/navigation";
+import { client } from "@/lib/client";
 
-interface MetamaskPageProps {}
-
-const MetamaskPage: FC<MetamaskPageProps> = () => {
+const MetamaskPage: FC = () => {
   const router = useRouter();
   const logoSrc = "/metamask.png";
 
@@ -23,12 +21,12 @@ const MetamaskPage: FC<MetamaskPageProps> = () => {
         Your browser does not support the video tag.
       </video>
 
-      <div className="fixed top-4 right-28 z-50 p-2 rounded-md shadow-lg border-1 border-[#00bfff] shadow-lg glow-effect">
+      <div className="fixed top-4 right-28 z-50 p-2 rounded-md shadow-lg border border-[#00bfff] shadow-lg glow-effect">
         <ConnectButton
           client={client}
-          theme="light"
-          connectModal={{ size: 'compact' }}
-          onConnect={handleConnect} // Redireciona após a conexão
+          theme="dark"
+          connectModal={{ size: "compact" }}
+          onConnect={handleConnect}
         />
       </div>
 

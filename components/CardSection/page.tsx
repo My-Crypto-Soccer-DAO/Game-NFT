@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { NFT, ThirdwebSDK } from '@thirdweb-dev/sdk';
 import PlayerCard from '../PlayerCard/page';
 import { useAddress, useContract } from '@thirdweb-dev/react';
-import { ThirdwebProvider } from 'thirdweb/react';
 
 const CardSection: React.FC = () => {
   const address = useAddress(); // Hook para pegar o endereço da carteira conectada
